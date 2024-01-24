@@ -6,8 +6,12 @@ using System;
 namespace Tamagotchi.TestTools
 {
   [TestClass]
-  public class PetTests
+  public class PetTests : IDisposable
   {
+    public void Dispose()
+    {
+      Pet.ClearAll();
+    }
     [TestMethod]
     public void PetConstructor_CreatesInstanceOfPet_Pet()
     {
@@ -72,6 +76,14 @@ namespace Tamagotchi.TestTools
       int result = newPet.Rest;
       Assert.AreEqual(updatedRest, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_PetList()
+    {
+      List<Pet> newList = new List<Pet> { };
+      List<Pet> result = Pet.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+    
 
 
   }
