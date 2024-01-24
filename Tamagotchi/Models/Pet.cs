@@ -4,13 +4,14 @@ namespace Tamagotchi.Models
   {
     public int Food { get; set; }
     public int Attention { get; set; }
-  public Pet(int food, int attention)
-  {
-    Food = food;
-    Attention = attention;
-    // Rest = rest;
-    
+    public int Rest { get; }
+    public Pet(int food, int attention, int rest)
+    {
+      Food = food;
+      Attention = attention;
+      Rest = rest;
 
+
+    }
   }
-}
 }
