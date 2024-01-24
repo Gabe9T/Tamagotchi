@@ -2,8 +2,8 @@ namespace Tamagotchi.Models
 {
   public class Pet
   {
-    public string Food { get; }
-  public Pet(string food)
+    public int Food { get; }
+  public Pet(int food)
   {
     Food = food;
     // Attention = attention;
