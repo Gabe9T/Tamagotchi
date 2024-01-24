@@ -32,7 +32,7 @@ namespace Tamagotchi.Controllers
     [HttpPost("/pets/feed")] //????
     public ActionResult Update(int id)
     {
-      Pets.Feed(id); //??
+      //Pets.Feed(id); //??
       return RedirectToAction("Show"); //??
     }
 }

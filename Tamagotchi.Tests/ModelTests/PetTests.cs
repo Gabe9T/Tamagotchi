@@ -126,6 +126,12 @@ namespace Tamagotchi.TestTools
       //Assert
       Assert.AreEqual(newPet, result);
     }
+    public void Feed_UpdatesFeed_Void()
+    {
+      Pet newPet = new Pet("Bob");
+      newPet.Feed();
+      Assert.AreEqual(11, newPet.Food);
+    }
 
   }
 }

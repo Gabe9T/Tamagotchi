@@ -32,9 +32,9 @@ namespace Tamagotchi.Models
     {
       return _instances[searchId-1];
     }
-    public static int Feed(pet)
+    public void Feed()
     {
-      return pet.Food + 1;
+      Food = Food + 1;
     }
   }
 }
