@@ -23,5 +23,17 @@ namespace Tamagotchi.TestTools
       int result = newPet.Food;
       Assert.AreEqual(food, result);
     }
+    [TestMethod]
+    public void SetFood_SetsValueOfFood_Int()
+    {
+      int food = 5;
+      Pet newPet = new Pet(food);
+      int updatedFood = 9;
+      newPet.Food = updatedFood;
+      int result = newPet.Food;
+      Assert.AreEqual(updatedFood, result);
+    }
+
+    
   }
   }
