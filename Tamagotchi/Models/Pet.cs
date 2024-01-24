@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace Tamagotchi.Models
 {
@@ -28,10 +29,18 @@ namespace Tamagotchi.Models
       _instances.Clear();
     }
 
-     public static Pet Find(int searchId)
+    public static Pet Find(int searchId)
     {
-      return _instances[searchId-1];
+      if (searchId > 0 && searchId <= _instances.Count)
+      {
+        return _instances[searchId - 1];
+      }
+      else
+      {
+        return null;
+      }
     }
+
     public void Feed()
     {
       Food = Food + 1;

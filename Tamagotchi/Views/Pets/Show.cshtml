@@ -6,7 +6,7 @@
   <title>Pet Stats</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="~/CSS/styles.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="~/CSS/styles.css" /> -->
 </head>
 
 <body>
@@ -15,11 +15,13 @@
   <h5>Belly full level: @Model.Food</h5>
   <h5>Attention level: @Model.Attention</h5>
   <h5>Rest Level: @Model.Rest</h5>
- 
-  <form action="/pets/feed" method="post">
+ @* @pet.Id *@
+  <form action="/pets/feed/@Model.Id" method="post" >
   @* route issue? *@
-  <button >Feed my pet</button>
+  <button type="submit">Feed my pet</button>
   </form>
+
+
 
   <button>Play with my pet</button>
   <button>Time for a nap</button>
