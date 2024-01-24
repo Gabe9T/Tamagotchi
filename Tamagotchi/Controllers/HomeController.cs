@@ -5,14 +5,11 @@ namespace Tamagotchi.Controllers
 {
   public class HomeController : Controller
   {
-    [Route("/hello")]
-    public string Hello() { return "Hello friend!"; }
-    // [Route("/")]
-    // public ActionResult Index() //routeMethodName
-    // {
-      
-    // }
-  //}
+    [Route("/")]
+    public ActionResult Index() 
+    {
+      return View();
+    }
 }
 }
 
