@@ -101,6 +101,16 @@ namespace Tamagotchi.TestTools
         List<Pet> result = Pet.GetAll();
         CollectionAssert.AreEqual(newList, result);
         }
+        [TestMethod]
+        public  void GetId_ItemsInstantiateWithIdAndGetterReturn_Int()
+        {
+          int food = 4;
+          int attention = 3;
+          int rest = 6;
+          Pet newPet = new Pet(food, attention, rest);
+          int result = newPet.Id;
+          Assert.AreEqual(1, result);
+        }
 
     }
 }

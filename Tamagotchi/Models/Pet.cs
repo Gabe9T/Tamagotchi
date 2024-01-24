@@ -8,13 +8,14 @@ namespace Tamagotchi.Models
     public int Food { get; set; }
     public int Attention { get; set; }
     public int Rest { get; set; }
+    public int Id { get; }
     public Pet(int food, int attention, int rest)
     {
       Food = food;
       Attention = attention;
       Rest = rest;
       _instances.Add(this);
-      // Id = _instances.Count;
+      Id = _instances.Count;
     }
     public static List<Pet> GetAll()
     {
