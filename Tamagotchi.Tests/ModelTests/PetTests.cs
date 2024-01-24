@@ -62,6 +62,16 @@ namespace Tamagotchi.TestTools
       int result = newPet.Rest;
       Assert.AreEqual(rest, result);
     }
+    [TestMethod]
+    public void SetRest_SetsValueOfRest_Int()
+    {
+      int rest = 5;
+      Pet newPet = new Pet(4, 5, rest);
+      int updatedRest = 9;
+      newPet.Rest = updatedRest;
+      int result = newPet.Rest;
+      Assert.AreEqual(updatedRest, result);
+    }
 
 
   }
