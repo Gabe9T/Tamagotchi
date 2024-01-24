@@ -23,6 +23,12 @@ namespace Tamagotchi.Controllers
       Pet newPet = new Pet(name);
       return RedirectToAction("Index");
     }
+    [HttpGet("/pets/{id}")]
+    public ActionResult Show(int id)
+    {
+      Pet foundPet = Pet.Find(id);
+      return View(foundPet);
+    }
 }
 }
 //feed

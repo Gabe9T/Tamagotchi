@@ -15,15 +15,15 @@ namespace Tamagotchi.TestTools
         [TestMethod]
         public void PetConstructor_CreatesInstanceOfPet_Pet()
         {
-            Pet newPet = new Pet(5, 5, 5);
+            Pet newPet = new Pet("test name");
             Assert.AreEqual(typeof(Pet), newPet.GetType());
         }
 
         [TestMethod]
         public void GetFood_ReturnsFood_Int()
         {
-            int food = 5;
-            Pet newPet = new Pet(food, 5, 5);
+            int food = 10;
+            Pet newPet = new Pet("name");
             int result = newPet.Food;
             Assert.AreEqual(food, result);
         }
@@ -31,7 +31,7 @@ namespace Tamagotchi.TestTools
         public void SetFood_SetsValueOfFood_Int()
         {
             int food = 5;
-            Pet newPet = new Pet(food, 5, 5);
+            Pet newPet = new Pet("name");
             int updatedFood = 9;
             newPet.Food = updatedFood;
             int result = newPet.Food;
@@ -42,16 +42,16 @@ namespace Tamagotchi.TestTools
 
         public void GetAttention_ReturnsAttention_Int()
         {
-            int attention = 5;
-            Pet newPet = new Pet(3, attention, 5);
+            int attention = 10;
+            Pet newPet = new Pet("name");
             int result = newPet.Attention;
             Assert.AreEqual(attention, result);
         }
         [TestMethod]
         public void SetAttention_SetsValueOfAttention_Int()
         {
-            int attention = 5;
-            Pet newPet = new Pet(4, attention, 5);
+            int attention = 10;
+            Pet newPet = new Pet("name");
             int updatedAttention = 9;
             newPet.Attention = updatedAttention;
             int result = newPet.Attention;
@@ -61,16 +61,16 @@ namespace Tamagotchi.TestTools
         [TestMethod]
         public void getRest_ReturnsRest_Int()
         {
-            int rest = 5;
-            Pet newPet = new Pet(3, 5, rest);
+            int rest = 10;
+            Pet newPet = new Pet("name");
             int result = newPet.Rest;
             Assert.AreEqual(rest, result);
         }
         [TestMethod]
         public void SetRest_SetsValueOfRest_Int()
         {
-            int rest = 5;
-            Pet newPet = new Pet(4, 5, rest);
+            int rest = 10;
+            Pet newPet = new Pet("name");
             int updatedRest = 9;
             newPet.Rest = updatedRest;
             int result = newPet.Rest;
@@ -88,14 +88,8 @@ namespace Tamagotchi.TestTools
 
         public void GetAll_ReturnsPets_PetsList()
         {
-            int food = 5;
-            int rest = 5;
-            int attention = 5;
-            int food2 = 5;
-            int rest2 = 5;
-            int attention2 = 5;
-            Pet newPet = new Pet(food, attention, rest);
-            Pet newPet2 = new Pet(food2, attention2, rest2);
+            Pet newPet = new Pet("name1");
+            Pet newPet2 = new Pet("name2");
 
             List<Pet> newList = new List<Pet> { newPet, newPet2 };
             List<Pet> result = Pet.GetAll();
@@ -104,24 +98,14 @@ namespace Tamagotchi.TestTools
         [TestMethod]
         public void GetId_ItemsInstantiateWithIdAndGetterReturn_Int()
         {
-            int food = 4;
-            int attention = 3;
-            int rest = 6;
-            Pet newPet = new Pet(food, attention, rest);
+            Pet newPet = new Pet("name");
             int result = newPet.Id;
             Assert.AreEqual(1, result);
         }
         public void Find_ReturnsCorrectPet_Pet()
         {
-            //Arrange
-            int food = 4;
-            int attention = 3;
-            int rest = 6;
-            int food2 = 4;
-            int attention2 = 3;
-            int rest2 = 6;
-            Pet newPet = new Pet(food, attention, rest);
-            Pet newPet2 = new Pet(food2, attention2, rest2);
+            Pet newPet = new Pet("name1");
+            Pet newPet2 = new Pet("name2");
             //Act
             Pet result = Pet.Find(2);
             //Assert
