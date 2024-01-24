@@ -26,9 +26,9 @@ namespace Tamagotchi.Models
       _instances.Clear();
     }
 
-    //  public static Item Find(int searchId)
-    // {
-    //   return _instances[searchId-1]; // -1 b/c index location != reality
-    // }
+     public static Pet Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
   }
 }

@@ -97,19 +97,35 @@ namespace Tamagotchi.TestTools
             Pet newPet = new Pet(food, attention, rest);
             Pet newPet2 = new Pet(food2, attention2, rest2);
 
-        List <Pet> newList = new List <Pet> {newPet, newPet2};
-        List<Pet> result = Pet.GetAll();
-        CollectionAssert.AreEqual(newList, result);
+            List<Pet> newList = new List<Pet> { newPet, newPet2 };
+            List<Pet> result = Pet.GetAll();
+            CollectionAssert.AreEqual(newList, result);
         }
         [TestMethod]
-        public  void GetId_ItemsInstantiateWithIdAndGetterReturn_Int()
+        public void GetId_ItemsInstantiateWithIdAndGetterReturn_Int()
         {
-          int food = 4;
-          int attention = 3;
-          int rest = 6;
-          Pet newPet = new Pet(food, attention, rest);
-          int result = newPet.Id;
-          Assert.AreEqual(1, result);
+            int food = 4;
+            int attention = 3;
+            int rest = 6;
+            Pet newPet = new Pet(food, attention, rest);
+            int result = newPet.Id;
+            Assert.AreEqual(1, result);
+        }
+        public void Find_ReturnsCorrectPet_Pet()
+        {
+            //Arrange
+            int food = 4;
+            int attention = 3;
+            int rest = 6;
+            int food2 = 4;
+            int attention2 = 3;
+            int rest2 = 6;
+            Pet newPet = new Pet(food, attention, rest);
+            Pet newPet2 = new Pet(food2, attention2, rest2);
+            //Act
+            Pet result = Pet.Find(2);
+            //Assert
+            Assert.AreEqual(newPet, result);
         }
 
     }
