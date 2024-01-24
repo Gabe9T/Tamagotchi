@@ -43,7 +43,17 @@ namespace Tamagotchi.TestTools
         int result = newPet.Attention;
         Assert.AreEqual(attention, result);
     }
+    [TestMethod]
+    public void SetAttention_SetsValueOfAttention_Int()
+    {
+      int attention = 5;
+      Pet newPet = new Pet(4, attention);
+      int updatedAttention = 9;
+      newPet.Attention = updatedAttention;
+      int result = newPet.Attention;
+      Assert.AreEqual(updatedAttention, result);
+    }
 
-    
+
   }
   }
