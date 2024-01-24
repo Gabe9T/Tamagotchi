@@ -45,5 +45,13 @@ namespace Tamagotchi.Models
     {
       Food = Food + 1;
     }
+    public void Play()
+    {
+      Attention = Attention + 1;
+    }
+    public void Sleep()
+    {
+      Rest = Rest + 1;
+    }
   }
 }

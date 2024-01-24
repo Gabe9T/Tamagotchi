@@ -15,16 +15,19 @@
   <h5>Belly full level: @Model.Food</h5>
   <h5>Attention level: @Model.Attention</h5>
   <h5>Rest Level: @Model.Rest</h5>
- @* @pet.Id *@
+
   <form action="/pets/feed/@Model.Id" method="post" >
-  @* route issue? *@
   <button type="submit">Feed my pet</button>
   </form>
+  
+<form action="/pets/play/@Model.Id" method="post" >
+  <button type="submit">Play with Pet</button>
+  </form>
 
-
-
-  <button>Play with my pet</button>
-  <button>Time for a nap</button>
+  <form action="/pets/rest/@Model.Id" method="post">
+    <button type="submit">Time for a nap</button>
+  </form>
+  
   <button>Make 1 day pass</button>
   <a href="/pets">Go back to list</a>
 </body>
