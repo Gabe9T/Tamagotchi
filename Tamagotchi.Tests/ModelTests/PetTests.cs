@@ -30,7 +30,6 @@ namespace Tamagotchi.TestTools
         [TestMethod]
         public void SetFood_SetsValueOfFood_Int()
         {
-            int food = 5;
             Pet newPet = new Pet("name");
             int updatedFood = 9;
             newPet.Food = updatedFood;
@@ -50,7 +49,6 @@ namespace Tamagotchi.TestTools
         [TestMethod]
         public void SetAttention_SetsValueOfAttention_Int()
         {
-            int attention = 10;
             Pet newPet = new Pet("name");
             int updatedAttention = 9;
             newPet.Attention = updatedAttention;
@@ -69,14 +67,31 @@ namespace Tamagotchi.TestTools
         [TestMethod]
         public void SetRest_SetsValueOfRest_Int()
         {
-            int rest = 10;
             Pet newPet = new Pet("name");
             int updatedRest = 9;
             newPet.Rest = updatedRest;
             int result = newPet.Rest;
             Assert.AreEqual(updatedRest, result);
         }
-        [TestMethod]
+    [TestMethod]
+    public void getName_ReturnsName_String()
+    {
+      string name = "name";
+      Pet newPet = new Pet(name);
+      string result = newPet.Name;
+      Assert.AreEqual(name, result);
+    }
+    [TestMethod]
+    public void SetName_SetsValueOfName_String()
+    {
+      string name = "Bob";
+      Pet newPet = new Pet(name);
+      string updatedName = "Spike";
+      newPet.Name = updatedName;
+      string result = newPet.Name;
+      Assert.AreEqual(updatedName, result);
+    }
+    [TestMethod]
         public void GetAll_ReturnsEmptyList_PetList()
         {
             List<Pet> newList = new List<Pet> { };
