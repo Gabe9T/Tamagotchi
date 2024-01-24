@@ -1,16 +1,9 @@
-## Template for ASP.NET Core MVC web application
 
-* set up project files, folders, and configure a host
-
-### Setup
-* Make sure parent directory is ProjectName.Solution
-* Change file names as necessary
-* commit .gitignore first
 
 ----------------
 Readme from C# Console App- toupdate
-# ProjectName
-_by Kim Robinson_
+# Tamagotchi
+_by Kim Robinson & Gabriel Tucker_
 
 ## Description
 
@@ -31,7 +24,7 @@ _by Kim Robinson_
 
 _This is a basic console application, not viewable on gh-pages. Please follow steps below to set up locally_
 
-1. Navigate to [my github repository](https://github.com/kimmykokonut/Bakery.Solution) for this project 
+1. Navigate to [github repository](https://github.com/kimmykokonut/Tamagotchi.Solution) for this project 
 
 2. Click the `Fork` button and  you will be taken to a new page where you can give your repository a new name and description. Choose "create fork".
 
@@ -39,7 +32,7 @@ _This is a basic console application, not viewable on gh-pages. Please follow st
 
 4. On your local computer, create a working directory for my files and name appropriately.
 
-5. On your terminal, type `$ git clone 'url'` (using the url from step 3.)
+5. On your terminal, type `$ git clone https://github.com/kimmykokonut/Tamagotchi.Solution.git` (using the url from step 3.)
 
 6. Once you have this on your local directory, if you ever want to push it to GitHub, you need to do these steps first so Git knows to ignore the obj and bin directories:
 `$ git init` to initialize Git (if cloning, this step automatically happened)
