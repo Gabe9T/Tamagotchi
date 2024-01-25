@@ -11,14 +11,14 @@ namespace Tamagotchi.Models
     public int Attention { get; set; } = 10;
     public int Rest { get; set; } = 10;
     public int Id { get; }
+    public DateTime Birthday { get; set; }
+
     public Pet(string name)
     {
       Name = name;
-      // Food = food;
-      // Attention = attention;
-      // Rest = rest;
       _instances.Add(this);
       Id = _instances.Count;
+      Birthday = DateTime.Now;
     }
     public static List<Pet> GetAll()
     {
@@ -52,6 +52,11 @@ namespace Tamagotchi.Models
     public void Sleep()
     {
       Rest = Rest + 1;
+    }
+    public string GetTimeAlive()
+    {
+      TimeSpan timeAlive = DateTime.Now - Birthday;
+      return $"{timeAlive.Days}d {timeAlive.Hours}h {timeAlive.Minutes}m {timeAlive.Seconds}s";
     }
   }
 }
